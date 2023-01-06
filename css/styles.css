@@ -1,0 +1,155 @@
+:root{
+    --DB:#0A3871;
+    --fondo: #EFF1FA;
+    --gris:#F3F5FC;
+    --blue: #356EA9;
+}
+html{
+    box-sizing: border-box;
+}
+*,*:before,*:after {
+  box-sizing: inherit;
+}
+.contenido{
+    background-color: var(--fondo);
+    height: 100vh;
+}
+
+.contenedor{
+    background-color: var(--gris);
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;  
+}
+@media(max-width: 768px){
+    .contenedor{
+        width: 768px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+/* formulario---------------- */
+.formulario{
+    grid-column: 1/4;
+    background-color: var(--gris);
+    border: none;
+}
+.formulario textarea{
+    background-color: var(--gris);
+    width: 100%;
+    height: 85%;
+    border: none;
+    resize: none;
+    outline: 0 none;
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 8rem;
+}
+.botones{
+    text-align: center;
+}
+.boton{
+    background-color: var(--DB);
+    display: inline-block;
+    width: 34%;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    margin-right: 1rem;
+    padding: 1rem  3rem;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.botones button:last-child{
+    margin: 0;
+    background-color: var(--fondo);
+    color: var(--blue);
+    border: 1px solid var(--DB);
+}
+@media(max-width: 768px){
+    .formulario{
+        height: 50%;
+    }
+    .formulario>textarea{
+        padding: 2rem;
+        overflow: hidden;
+        width: 100%;
+        text-align: center;
+    }
+    .boton{
+        max-width: 90%;
+        padding: 1rem 0;
+    }
+}
+/* Textos encriptados -------- */
+.encriptado{
+    grid-column: 4/5;
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding-top: 3rem;
+    max-width: 100%;
+}
+
+.textarea{
+    border: none;
+    width: 85%;
+    height: 85%;
+    overflow-y: scroll;
+    resize: none;
+    outline: 0 none;
+    margin: 0 auto;
+    border: 5px solid var(--fondo);
+    border-radius: 25px;
+    background-color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.encriptado>.boton{
+    text-align: center;
+    width: 80% ;
+    margin: 0;
+    background-color: var(--fondo);
+    color: var(--blue);
+    border: 1px solid var(--DB);
+}
+@media(max-width: 768px){
+    .encriptado{
+        height: 50%;
+    }
+}
+
+.error{
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ff8581 ;
+    color: var(--gris);
+    /* #ff8581 */
+    font-weight: bold;
+    font-size: 1.4rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 35px 0 35px 0;
+}
+.success{
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #52ff86 ;
+    color: var(--gris);
+    /* #ff8581 */
+    font-weight: bold;
+    font-size: 1.4rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0 35px 0 35px ;
+}
